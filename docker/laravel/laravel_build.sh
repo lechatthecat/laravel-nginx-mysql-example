@@ -1,9 +1,8 @@
 #!/bin/ash
-cd /laravel-coreui/src
-npm install
+cd /laravel
 composer install
 php artisan key:generate
-chown -R www-data:www-data ../../laravel-coreui/src
+chown -R www-data:www-data .
 chmod 777 storage
+npm install
 npm run dev 
-#tail -f /dev/null
