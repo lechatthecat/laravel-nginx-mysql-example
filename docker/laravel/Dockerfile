@@ -12,6 +12,5 @@ RUN set -eux && \
   cp /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
   apk del .build-php-dependencies && \
   docker-php-ext-install pdo_mysql && \
-  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
-
-CMD sh -x /laravel_build.sh
+  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
+  composer create-project --prefer-dist laravel/laravel sample_laravel

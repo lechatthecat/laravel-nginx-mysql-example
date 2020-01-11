@@ -38,8 +38,6 @@ services:
             - ./logs:/var/log/php
             # Où charger le php.ini.
             - ./docker/laravel/php.ini:/usr/local/etc/php/php.ini
-        ports:
-            - 8080:8080
         # Atendre que le conteneur "mydb" soit prêt.
         depends_on:
             - mydb
