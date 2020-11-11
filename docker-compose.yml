@@ -31,7 +31,7 @@ services:
         working_dir: /laravel
         volumes:
             # Où se trouve le code source de laravel
-            - ./laravel:/laravel
+            - ./laravel:/laravel:z
             # Si on veut utiliser shell. 
             - ./docker/laravel/laravel_build.sh:/laravel_build.sh:z
             # pour les fichiers des logs.
