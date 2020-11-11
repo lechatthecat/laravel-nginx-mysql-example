@@ -40,7 +40,7 @@ services:
             # Où se trouve le code source de laravel
             - <<: *laravel-volume
             # Si on veut utiliser shell. 
-            - ./docker/laravel/laravel_build.sh:/laravel_build.sh:z
+            - ./docker/laravel/laravel_build.sh:/laravel/laravel_build.sh:z
             # pour les fichiers des logs.
             - ./logs:/var/log/php
             # Où charger le php.ini.
